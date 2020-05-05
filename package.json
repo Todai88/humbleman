@@ -6,15 +6,19 @@
   "scripts": {
     "start": "parcel index.html",
     "lint": "tsc --noEmit",
-    "ship": "rm -rf dist && parcel build index.html && surge --domain https://dungeon-dash.surge.sh dist && rm -rf dist"
+    "ship": "rm -rf dist && parcel build index.html && surge --domain https://dungeon-dash.surge.sh dist && rm -rf dist",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Michael Pearson & Others",
   "license": "MIT",
   "dependencies": {
     "dungeon-factory": "^1.0.6",
     "mrpas": "^1.2.1",
-    "parcel": "^1.9.7",
+    "parcel": "^1.12.4",
     "phaser": "^3.13.0",
-    "typescript": "^3.0.3"
-  }
+    "typescript": "^3.0.3",
+    "snyk": "^1.319.0"
+  },
+  "snyk": true
 }
